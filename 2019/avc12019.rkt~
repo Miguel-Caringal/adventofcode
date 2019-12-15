@@ -6,11 +6,3 @@
         [else (+ (- (floor (/ (first lst) 3)) 2) (adv1 (rest lst)))]
   ))
 
-(define (adv2h num)
-  (cond [(<= (- (floor (/ num 3)) 2) 0) 0]
-        [else (+ (- (floor (/ num 3)) 2) (adv2h (- (floor (/ num 3)) 2)))]
-  ))
-
-(define (adv2 lst)
-     (cond [(empty? lst) 0]
-     [else (+ (adv2h (first lst)) (adv2 (rest lst)))]))
